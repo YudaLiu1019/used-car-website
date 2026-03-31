@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Used Vehicle of BBA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Used Vehicle of BBA</h1>
+<p>(Mercedes-Benz BMW Audi)</p>
+</header>
+<nav class="navbar">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+
+<input type="text" placeholder="Search vehicles..." id="searchInput">
+<button onclick="searchCar()">Search</button>
+
+</nav>
+
+<section class="brand-container">
+
+<div class="brand-card">
+<a href="bmw.html">
+<img src="images/bmw.png" alt="BMW">
+<h2>BMW</h2>
+<p>View available BMW vehicles</p>
+</a>
+</div>
+
+<div class="brand-card">
+<a href="benz.html">
+<img src="images/benz.png" alt="Mercedes-Benz">
+<h2>Mercedes-Benz</h2>
+<p>View available Mercedes vehicles</p>
+</a>
+</div>
+
+<div class="brand-card">
+<a href="audi.html">
+<img src="images/audi.png" alt="Audi">
+<h2>Audi</h2>
+<p>View available Audi vehicles</p>
+</a>
+</div>
+
+</section>
+
+<footer>
+<p>Used Car Inventory Website</p>
+</footer>
+
+</body>
+</html>
+<script>
+
+function searchCar(){
+
+let input = document.getElementById("searchInput").value.toLowerCase();
+
+if(input.includes("bmw")){
+window.location.href = "bmw.html";
+}
+else if(input.includes("mercedes") || input.includes("benz")){
+window.location.href = "benz.html";
+}
+else if(input.includes("audi")){
+window.location.href = "audi.html";
+}
+else{
+alert("Vehicle not found. Try BMW, Mercedes, or Audi.");
+}
+
+}
+
+</script>
